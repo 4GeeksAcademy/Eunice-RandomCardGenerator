@@ -16,11 +16,18 @@ function generateRandomCard() {
     "8",
     "9",
     "10",
-    "King",
-    "Queen",
-    "Jack",
-    "Ace"
+    "K",
+    "Q",
+    "J",
+    "A"
   ];
+
+  function getRandomColor(colors) {
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  let suitSymbol;
+  let suitColor;
 
   // Generate random indices for suit and value arrays
   let suitIndex = Math.floor(Math.random() * suits.length);
@@ -35,6 +42,32 @@ function generateRandomCard() {
   // Add the new suit class based on the random index
   card.classList.add(suits[suitIndex]);
 
-  // Set the card value based on the random index
+  switch (suits[suitIndex]) {
+    case "heart":
+      suitSymbol = "&hearts;";
+      suitColor = getRandomColor(["black", "red"]);
+      break;
+    case "spade":
+      suitSymbol = "&spades;";
+      suitColor = getRandomColor(["black", "red"]);
+      break;
+    case "club":
+      suitSymbol = "&clubs;";
+      suitColor = getRandomColor(["black", "red"]);
+      break;
+    case "diamond":
+      suitSymbol = "&diams;";
+      suitColor = getRandomColor(["black", "red"]);
+      break;
+  }
+
+  // Set the suit symbol for the card
+  document.querySelectorAll(".suits").forEach(suit => {
+    suit.innerHTML = suitSymbol;
+    suit.style.color = suitColor;
+  });
+
+  // Set the card value color based on the random index
   document.querySelector(".number").textContent = values[valueIndex];
+  document.querySelector(".number").style.color = suitColor;
 }
