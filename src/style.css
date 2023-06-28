@@ -1,1 +1,31 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Container Properties */
+body {
+  background-color: green;
+}
+.big-container {
+  max-width: 35%;
+  font-family: "Times New Roman", Times, serif;
+  padding: 4rem;
+}
+.card {
+  background-color: white;
+}
+
+/* Top Suit Properties */
+.top-suit {
+  font-size: 6rem;
+  padding-left: 2rem;
+}
+
+/* Number Properties */
+.number {
+  font-size: 10rem;
+}
+
+/* Bottom Suit Properties */
+.bottom-suit {
+  font-size: 6rem;
+  padding-right: 2rem;
+}
