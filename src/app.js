@@ -1,11 +1,11 @@
 import "./style.css";
 
-window.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
   generateRandomCard();
   document.querySelector("#button").addEventListener("click", () => {
-    generateRandomCard();
+    document.querySelector(".card").innerHTML = generateRandomCard();
   });
-});
+};
 
 function generateRandomCard() {
   let suits = ["heart", "spade", "club", "diamond"];
@@ -70,4 +70,6 @@ function generateRandomCard() {
   // Card value and color based on the random index
   document.querySelector(".number").textContent = values[valueIndex];
   document.querySelector(".number").style.color = suitColor;
+
+  return card.innerHTML;
 }
