@@ -1,6 +1,5 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-
 /* Container Properties */
+
 body {
   background-color: green;
 }
@@ -14,6 +13,7 @@ body {
 }
 
 /* Suits Properties */
+
 .suits {
   font-size: 6rem;
   padding-left: 2rem;
@@ -21,6 +21,17 @@ body {
 }
 
 /* Number Properties */
+
 .number {
   font-size: 10rem;
+}
+
+/* Button Properties */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
 }
