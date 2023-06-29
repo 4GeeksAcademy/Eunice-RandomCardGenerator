@@ -29,17 +29,17 @@ function generateRandomCard() {
   let suitSymbol;
   let suitColor;
 
-  // Generate random indices for suit and value arrays
+  // Random indices for suit and value arrays
   let suitIndex = Math.floor(Math.random() * suits.length);
   let valueIndex = Math.floor(Math.random() * values.length);
 
-  // Get the card element
+  // Card element
   let card = document.querySelector(".card");
 
-  // Remove existing suit class
+  // Existing suit class
   card.classList.remove("heart", "spade", "club", "diamond");
 
-  // Add the new suit class based on the random index
+  // New suit class based on the random index
   card.classList.add(suits[suitIndex]);
 
   switch (suits[suitIndex]) {
@@ -61,13 +61,13 @@ function generateRandomCard() {
       break;
   }
 
-  // Set the suit symbol for the card
+  // Suit symbol for the card
   document.querySelectorAll(".suits").forEach(suit => {
     suit.innerHTML = suitSymbol;
     suit.style.color = suitColor;
   });
 
-  // Set the card value color based on the random index
+  // Card value color based on the random index
   document.querySelector(".number").textContent = values[valueIndex];
   document.querySelector(".number").style.color = suitColor;
 }
