@@ -1,6 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 /* Container Properties */
+
 body {
   background-color: green;
 }
@@ -14,6 +15,7 @@ body {
 }
 
 /* Suits Properties */
+
 .suits {
   font-size: 6rem;
   padding-left: 2rem;
@@ -21,6 +23,7 @@ body {
 }
 
 /* Number Properties */
+
 .number {
   font-size: 10rem;
 }
