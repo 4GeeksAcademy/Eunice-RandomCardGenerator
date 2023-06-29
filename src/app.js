@@ -2,6 +2,9 @@ import "./style.css";
 
 window.onload = () => {
   generateRandomCard();
+  document.querySelector("#button").addEventListener("click", () => {
+    document.querySelector(".card").innerHTML = generateRandomCard();
+  });
 };
 
 function generateRandomCard() {
@@ -36,7 +39,7 @@ function generateRandomCard() {
   // Card element
   let card = document.querySelector(".card");
 
-  // Existing suit class
+  // Remove existing suit class
   card.classList.remove("heart", "spade", "club", "diamond");
 
   // New suit class based on the random index
@@ -45,29 +48,28 @@ function generateRandomCard() {
   switch (suits[suitIndex]) {
     case "heart":
       suitSymbol = "&hearts;";
-      suitColor = getRandomColor(["black", "red"]);
       break;
     case "spade":
       suitSymbol = "&spades;";
-      suitColor = getRandomColor(["black", "red"]);
       break;
     case "club":
       suitSymbol = "&clubs;";
-      suitColor = getRandomColor(["black", "red"]);
       break;
     case "diamond":
       suitSymbol = "&diams;";
-      suitColor = getRandomColor(["black", "red"]);
       break;
   }
 
-  // Suit symbol for the card
+  // Suit symbol and color for the card
+  suitColor = getRandomColor(["black", "red"]);
   document.querySelectorAll(".suits").forEach(suit => {
     suit.innerHTML = suitSymbol;
     suit.style.color = suitColor;
   });
 
-  // Card value color based on the random index
+  // Card value and color based on the random index
   document.querySelector(".number").textContent = values[valueIndex];
   document.querySelector(".number").style.color = suitColor;
+
+  return card.innerHTML;
 }
