@@ -27,3 +27,13 @@ body {
 .number {
   font-size: 10rem;
 }
+
+/* Button Properties */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}

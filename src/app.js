@@ -1,8 +1,11 @@
 import "./style.css";
 
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", () => {
   generateRandomCard();
-};
+  document.querySelector("#button").addEventListener("click", () => {
+    generateRandomCard();
+  });
+});
 
 function generateRandomCard() {
   let suits = ["heart", "spade", "club", "diamond"];
